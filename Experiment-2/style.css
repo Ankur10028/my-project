@@ -1,78 +1,76 @@
+/* reset & box-model */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, #f3f4f6, #e5e7eb);
-    padding: 20px;
-  }
-  
-  .banking-ui {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-  }
-  
-  .balance-box {
-    background-color: #f0f9ff;
-    border: 2px solid #38bdf8;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .balance-box h2 {
-    font-size: 1.2rem;
-    color: #0369a1;
-    margin-bottom: 0.5rem;
-  }
-  
-  .balance-box p {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #0c4a6e;
-  }
-  
-  .button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .btn {
-    border: none;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: not-allowed;
-    color: white;
-    transition: background-color 0.3s;
-  }
-  
-  /* Green Deposit Button */
-  .btn-deposit {
-    background-color: #16a34a;
-  }
-  .btn-deposit:hover {
-    background-color: #15803d;
-  }
-  
-  /* Red Withdraw Button */
-  .btn-withdraw {
-    background-color: #dc2626;
-  }
-  .btn-withdraw:hover {
-    background-color: #b91c1c;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body & overall layout */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* header */
+header {
+  flex-shrink: 0;
+  background: #2ecc71;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+/* wrap sidebar + content */
+.main {
+  flex: 1;
+  display: flex;
+  overflow: hidden; /* prevent overflow */
+}
+
+/* sidebar */
+nav {
+  width: 180px;
+  background: #2d2f2a;
+  color: white;
+  padding: 20px;
+  border-right: 1px solid #000;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li + li {
+  margin-top: 10px;
+}
+nav ul li a {
+  color: #b19cd9;
+  text-decoration: underline;
+}
+
+/* content area */
+main {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border: 1px solid #000;
+  margin: 10px; /* space around content box */
+  overflow-y: auto;
+}
+main h2 {
+  margin-bottom: 10px;
+}
+
+/* footer */
+footer {
+  flex-shrink: 0;
+  background: #2ecc71;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #000;
+}
