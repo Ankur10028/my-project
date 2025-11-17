@@ -1,0 +1,38 @@
+/* RESET DEFAULT DARK THEME */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #000;
+}
+
+/* FORM STYLING */
+input, textarea {
+  background: white !important;
+  color: black !important;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+button {
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
